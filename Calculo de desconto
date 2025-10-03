@@ -1,0 +1,129 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNEuaC5qIyOPddM+GnfLmor",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/adailtoneumesmo/facudade/blob/main/Calculo%20de%20desconto\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 11,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "41LaKMwF38-q",
+        "outputId": "86e37c5f-b468-4698-d49b-e3a48672fbef"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "Digitar o valo do produto: R$ 96\n"
+          ]
+        }
+      ],
+      "source": [
+        "#solicitar ao usuario a informar o valor do produto e o percentua de desconto\n",
+        "\n",
+        "valor_produto = float(input(\"Digitar o valo do produto: R$ \"))"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "percentual_desconto = float(input(\"Digite a marcem de desconto: \"))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "JWgJ1Fsj4fqR",
+        "outputId": "41b297b1-fe01-4a14-dfcd-b8a50ca80199"
+      },
+      "execution_count": 12,
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "Digite a marcem de desconto: 35\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Validar se o desconto informado esta dentro do permitido\n",
+        "if percentual_desconto < 0 or percentual_desconto > 55:\n",
+        "  print(\"Percentual de desconta esta fora do valor permitido de 0% a 55%\")\n",
+        "else:\n",
+        "    #montar o calculo do desconto\n",
+        "    desconto = valor_produto *(percentual_desconto / 100)"
+      ],
+      "metadata": {
+        "id": "7FaW2A7C41nI"
+      },
+      "execution_count": 13,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Calculo final do produto\n",
+        "valor_final = valor_produto - desconto"
+      ],
+      "metadata": {
+        "id": "gEhAQxAQ5zRQ"
+      },
+      "execution_count": 14,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(f\"Valor com o desconto R$ {valor_final:.2f} \")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "JTvDUTJN6CKb",
+        "outputId": "c03f0fff-eead-4e26-967d-52a3bbf909e9"
+      },
+      "execution_count": 16,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Valor com o desconto R$ 62.40 \n"
+          ]
+        }
+      ]
+    }
+  ]
+}
