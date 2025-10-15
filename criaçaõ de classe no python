@@ -1,0 +1,106 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyM5g90aZ2YK3uYY/HnJ7eoe",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/adailtoneumesmo/facudade/blob/main/cria%C3%A7a%C3%B5%20de%20classe%20no%20python\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "K-bugPj5hPNK"
+      },
+      "outputs": [],
+      "source": [
+        "# criação de classe no Python"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "class Pessoa:\n",
+        "#O metodo \"_init_\", é um construtor, chamado quando o objeto da classe é criado.\n",
+        "# Ele inicializa os atributos da classi(as informações que devemos capiturar na classe)\n",
+        "\n",
+        "  def __init__(self, nome, idade, genero):\n",
+        "#self é uma convenção em python que se refere a propria instancia da classe\n",
+        "#Os paremetro nome, idade, genero são passados durante a criação do objeto\n",
+        "#Eles são usados para inicializar os atributos da instancia.\n",
+        "    self.nome = nome #Atribuir o valor de nome ao atribuir nome na instancia\n",
+        "    self.idade = idade #Atribuir o valor de idade ao atribuir idade na instancia\n",
+        "    self.genero = genero #Atribuir o valor de genero ao atribuir genero na instancia\n",
+        "\n",
+        " #cria metodo comprimento saudação a Pessoa\n",
+        "  def comprimento(self):\n",
+        "    return f\"Olá meu nome é: {self.nome}.\"\n",
+        "\n",
+        "#vamos criar o metodo aniversario para aumentar a idade da pessoa em 1\n",
+        "  def aniversario(self):\n",
+        "    self.idade += 1\n",
+        "\n",
+        "#Vamos criar uma instancia na classe Pessoa, adicionado nome idade e genero:\n",
+        "pessoa1 = Pessoa(\"João\", 25, \"Masculino\")\n",
+        "pessoa2 = Pessoa(\"Julia\", 32, \"Feminino\")\n",
+        "#vamos chamar o metodo comprimento e atribuir as isntancias criadas\n",
+        "print(pessoa1.comprimento())\n",
+        "print(f\"idade: {pessoa1.idade}\")\n",
+        "pessoa1.aniversario()\n",
+        "print(f\"Nova idade: {pessoa1.idade}\\n\")\n",
+        "\n",
+        "print(pessoa2.comprimento())\n",
+        "print(f\"idade: {pessoa2.idade}\")\n",
+        "pessoa2.aniversario()\n",
+        "print(f\"Nova idade: {pessoa2.idade}\")\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "RiTIBA1DwTKr",
+        "outputId": "e518a8ef-9048-451a-9e99-25f060a19d72"
+      },
+      "execution_count": 16,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Olá meu nome é: João.\n",
+            "idade: 25\n",
+            "Nova idade: 26\n",
+            "\n",
+            "Olá meu nome é: Julia.\n",
+            "idade: 32\n",
+            "Nova idade: 33\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
